@@ -64,10 +64,7 @@ public class CARPDomainSharedModule : AbpModule
                 .Get<CmsKitResource>()
                 .AddVirtualJson("/Localization/CMSCARP");
 
-            //options.Resources
-            //   .Get<AccountResource>()
-            //   .AddVirtualJson("/Localization/ADMINCARP");
-
+         
             options.DefaultResourceType = typeof(CARPResource);
             options.Languages.Add(new LanguageInfo("uk-UA", "uk-UA", "Український"));
             options.Languages.Add(new LanguageInfo("en", "en", "English"));

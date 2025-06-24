@@ -7,6 +7,9 @@ using Volo.Abp.FeatureManagement;
 using Volo.Abp.Modularity;
 using Volo.Abp.TenantManagement;
 using Volo.CmsKit;
+using Volo.Abp.Account.Localization;
+using Volo.Abp.Localization;
+using Volo.Abp.Validation.Localization;
 
 namespace VPW.CARP;
 
@@ -29,5 +32,12 @@ namespace VPW.CARP;
         {
             options.AddMaps<CARPApplicationModule>();
         });
+        Configure<AbpLocalizationOptions>(options =>
+        {
+            options.Resources
+               .Get<AbpValidationResource>()
+               .AddVirtualJson("/Localization/CARPAccount");
+        });
     }
 }
+//https://github.com/abpframework/abp/blob/rel-9.3/modules/account/src/Volo.Abp.Account.Application.Contracts/Volo/Abp/Account/Localization/AccountResource.cs
