@@ -1,0 +1,18 @@
+﻿{
+  "applications": {
+    "VPW.CARP.Web": {
+      "type": "dotnet-project",
+      "launchUrl": "https://localhost:44334",
+      "path": "../../../src/VPW.CARP.Web/VPW.CARP.Web.csproj",
+      "kubernetesService": ".*-web$",
+      "healthCheckEndpoint": "/health-status",
+      "healthUiEndpoint": "/health-ui",
+      "execution": {
+        "order": 2
+      }
+    }
+  },
+  "containers": {
+    "serviceName": "CARP-Containers",
+  }
+}

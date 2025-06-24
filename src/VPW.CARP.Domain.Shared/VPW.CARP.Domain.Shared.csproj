@@ -1,0 +1,64 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <RootNamespace>VPW.CARP</RootNamespace>
+    <GenerateEmbeddedFilesManifest>true</GenerateEmbeddedFilesManifest>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.BackgroundJobs.Domain.Shared" Version="9.2.0" />
+    <PackageReference Include="Volo.Abp.AuditLogging.Domain.Shared" Version="9.2.0" />
+    <PackageReference Include="Volo.Abp.BlobStoring.Google" Version="9.2.0" />
+    <PackageReference Include="Volo.Abp.FeatureManagement.Domain.Shared" Version="9.2.0" />
+    <PackageReference Include="Volo.Abp.PermissionManagement.Domain.Shared" Version="9.2.0" />
+    <PackageReference Include="Volo.Abp.SettingManagement.Domain.Shared" Version="9.2.0" />
+    <PackageReference Include="Volo.Abp.BlobStoring.Database.Domain.Shared" Version="9.2.0" />
+    <PackageReference Include="Volo.Abp.GlobalFeatures" Version="9.2.0" />
+    <PackageReference Include="Volo.CmsKit.Domain.Shared" Version="9.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.OpenIddict.Domain.Shared" Version="9.2.0" />
+    <PackageReference Include="Volo.Abp.Identity.Domain.Shared" Version="9.2.0" />
+    <PackageReference Include="Volo.Abp.TenantManagement.Domain.Shared" Version="9.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" Version="9.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\CARP\*.json" />
+    <Content Remove="Localization\CARP\*.json" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Include="Localization\CMSCARP\*.json" />
+		<Content Remove="Localization\CMSCARP\*.json" />
+	</ItemGroup>
+	
+  <ItemGroup>
+    <EmbeddedResource Include="LocalizationScip\ar.json" />
+    <EmbeddedResource Include="LocalizationScip\cs.json" />
+    <EmbeddedResource Include="LocalizationScip\de-DE.json" />
+    <EmbeddedResource Include="LocalizationScip\es.json" />
+    <EmbeddedResource Include="LocalizationScip\fi.json" />
+    <EmbeddedResource Include="LocalizationScip\fr.json" />
+    <EmbeddedResource Include="LocalizationScip\hi.json" />
+    <EmbeddedResource Include="LocalizationScip\hu.json" />
+    <EmbeddedResource Include="LocalizationScip\is.json" />
+    <EmbeddedResource Include="LocalizationScip\it.json" />
+    <EmbeddedResource Include="LocalizationScip\pt-BR.json" />
+    <EmbeddedResource Include="LocalizationScip\ro-RO.json" />
+    <EmbeddedResource Include="LocalizationScip\sk.json" />
+    <EmbeddedResource Include="LocalizationScip\sv.json" />
+    <EmbeddedResource Include="LocalizationScip\tr.json" />
+    <EmbeddedResource Include="LocalizationScip\zh-Hans.json" />
+    <EmbeddedResource Include="LocalizationScip\zh-Hant.json" />
+  </ItemGroup>
+
+</Project>

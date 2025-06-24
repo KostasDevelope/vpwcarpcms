@@ -1,0 +1,105 @@
+{
+  "template": "app",
+  "imports": {
+    "Volo.Abp.LeptonXLiteTheme": {
+      "version": "4.2.0",
+      "isInstalled": true
+    },
+    "Volo.Abp.Account": {
+      "version": "9.2.0",
+      "isInstalled": true
+    },
+    "Volo.Abp.OpenIddict": {
+      "version": "9.2.0",
+      "isInstalled": true
+    },
+    "Volo.Abp.Identity": {
+      "version": "9.2.0",
+      "isInstalled": true
+    },
+    "Volo.Abp.TenantManagement": {
+      "version": "9.2.0",
+      "isInstalled": true
+    },
+    "Volo.Abp.SettingManagement": {
+      "version": "9.2.0",
+      "isInstalled": true
+    },
+    "Volo.Abp.PermissionManagement": {
+      "version": "9.2.0",
+      "isInstalled": true
+    },
+    "Volo.Abp.FeatureManagement": {
+      "version": "9.2.0",
+      "isInstalled": true
+    }
+  },
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {}
+    }
+  },
+  "packages": {
+    "VPW.CARP.Application": {
+      "path": "src/VPW.CARP.Application/VPW.CARP.Application.abppkg",
+      "folder": "src"
+    },
+    "VPW.CARP.Application.Tests": {
+      "path": "test/VPW.CARP.Application.Tests/VPW.CARP.Application.Tests.abppkg",
+      "folder": "test"
+    },
+    "VPW.CARP.Domain.Shared": {
+      "path": "src/VPW.CARP.Domain.Shared/VPW.CARP.Domain.Shared.abppkg",
+      "folder": "src"
+    },
+    "VPW.CARP.Application.Contracts": {
+      "path": "src/VPW.CARP.Application.Contracts/VPW.CARP.Application.Contracts.abppkg",
+      "folder": "src"
+    },
+    "VPW.CARP.HttpApi": {
+      "path": "src/VPW.CARP.HttpApi/VPW.CARP.HttpApi.abppkg",
+      "folder": "src"
+    },
+    "VPW.CARP.HttpApi.Client": {
+      "path": "src/VPW.CARP.HttpApi.Client/VPW.CARP.HttpApi.Client.abppkg",
+      "folder": "src"
+    },
+    "VPW.CARP.Web": {
+      "path": "src/VPW.CARP.Web/VPW.CARP.Web.abppkg",
+      "folder": "src"
+    },
+    "VPW.CARP.Web.Tests": {
+      "path": "test/VPW.CARP.Web.Tests/VPW.CARP.Web.Tests.abppkg",
+      "folder": "test"
+    },
+    "VPW.CARP.EntityFrameworkCore.Tests": {
+      "path": "test/VPW.CARP.EntityFrameworkCore.Tests/VPW.CARP.EntityFrameworkCore.Tests.abppkg",
+      "folder": "test"
+    },
+    "VPW.CARP.EntityFrameworkCore": {
+      "path": "src/VPW.CARP.EntityFrameworkCore/VPW.CARP.EntityFrameworkCore.abppkg",
+      "folder": "src"
+    },
+    "VPW.CARP.TestBase": {
+      "path": "test/VPW.CARP.TestBase/VPW.CARP.TestBase.abppkg",
+      "folder": "test"
+    },
+    "VPW.CARP.Domain.Tests": {
+      "path": "test/VPW.CARP.Domain.Tests/VPW.CARP.Domain.Tests.abppkg",
+      "folder": "test"
+    },
+    "VPW.CARP.HttpApi.Client.ConsoleTestApp": {
+      "path": "test/VPW.CARP.HttpApi.Client.ConsoleTestApp/VPW.CARP.HttpApi.Client.ConsoleTestApp.abppkg",
+      "folder": "test"
+    },
+    "VPW.CARP.DbMigrator": {
+      "path": "src/VPW.CARP.DbMigrator/VPW.CARP.DbMigrator.abppkg",
+      "folder": "src"
+    },
+    "VPW.CARP.Domain": {
+      "path": "src/VPW.CARP.Domain/VPW.CARP.Domain.abppkg",
+      "folder": "src"
+    }
+  }
+}
