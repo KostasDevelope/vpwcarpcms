@@ -1,6 +1,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using System.Collections.Generic;
 using System.Linq;
+using System.Resources;
 using Volo.Abp.AuditLogging;
 using Volo.Abp.BackgroundJobs;
 using Volo.Abp.BlobStoring;
@@ -8,6 +9,7 @@ using Volo.Abp.BlobStoring.Database;
 using Volo.Abp.BlobStoring.Google;
 using Volo.Abp.FeatureManagement;
 using Volo.Abp.Identity;
+using Volo.Abp.Identity.Localization;
 using Volo.Abp.Localization;
 using Volo.Abp.Localization.ExceptionHandling;
 using Volo.Abp.Modularity;
@@ -55,20 +57,23 @@ public class CARPDomainSharedModule : AbpModule
 
         Configure<AbpLocalizationOptions>(options =>
         {
-            options.Resources
-                  .Get<AbpValidationResource>()
-                  .AddVirtualJson("/Localization/CARPAPP");
-
+           
             options.Resources
                 .Add<CARPResource>("uk-UA")
                 .AddBaseTypes(typeof(AbpValidationResource))
                 .AddVirtualJson("/Localization/CARP");
 
+            //https://github.com/abpframework/abp/issues/7280
+            //https://github.com/abpframework/abp/blob/badad8d59f02bb0ccba433b49a7fc24ee7bf3b5a/modules/identity/src/Volo.Abp.Identity.Domain.Shared/Volo/Abp/Identity/Localization/en.json#L47
+            options.Resources
+                 .Get<Volo.Abp.Identity.Localization.IdentityResource>()
+                 .AddVirtualJson("/Localization/CARPAPP");
+
             options.Resources
                 .Get<CmsKitResource>()
                 .AddVirtualJson("/Localization/CMSCARP");
-
             
+
             options.DefaultResourceType = typeof(CARPResource);
             options.Languages.Add(new LanguageInfo("uk-UA", "uk-UA", "Український"));
             options.Languages.Add(new LanguageInfo("en", "en", "English"));

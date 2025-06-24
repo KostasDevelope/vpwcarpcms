@@ -63,6 +63,7 @@
     <EmbeddedResource Include="LocalizationScip\sk.json" />
     <EmbeddedResource Include="LocalizationScip\sv.json" />
     <EmbeddedResource Include="LocalizationScip\tr.json" />
+    <EmbeddedResource Include="LocalizationScip\uk-UA1.json" />
     <EmbeddedResource Include="LocalizationScip\zh-Hans.json" />
     <EmbeddedResource Include="LocalizationScip\zh-Hant.json" />
   </ItemGroup>
