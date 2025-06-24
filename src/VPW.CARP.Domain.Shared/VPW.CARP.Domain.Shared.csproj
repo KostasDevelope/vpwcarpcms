@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <Import Project="..\..\common.props" />
 
@@ -40,8 +40,14 @@
 		<EmbeddedResource Include="Localization\CMSCARP\*.json" />
 		<Content Remove="Localization\CMSCARP\*.json" />
 	</ItemGroup>
-	
-  <ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Include="Localization\CARPAPP\*.json" />
+		<Content Remove="Localization\CARPAPP\*.json" />
+	</ItemGroup>
+
+
+	<ItemGroup>
     <EmbeddedResource Include="LocalizationScip\ar.json" />
     <EmbeddedResource Include="LocalizationScip\cs.json" />
     <EmbeddedResource Include="LocalizationScip\de-DE.json" />

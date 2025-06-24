@@ -32,12 +32,7 @@ namespace VPW.CARP;
         {
             options.AddMaps<CARPApplicationModule>();
         });
-        Configure<AbpLocalizationOptions>(options =>
-        {
-            options.Resources
-               .Get<AbpValidationResource>()
-               .AddVirtualJson("/Localization/CARPAccount");
-        });
+       
     }
 }
 //https://github.com/abpframework/abp/blob/rel-9.3/modules/account/src/Volo.Abp.Account.Application.Contracts/Volo/Abp/Account/Localization/AccountResource.cs

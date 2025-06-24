@@ -56,6 +56,10 @@ public class CARPDomainSharedModule : AbpModule
         Configure<AbpLocalizationOptions>(options =>
         {
             options.Resources
+                  .Get<AbpValidationResource>()
+                  .AddVirtualJson("/Localization/CARPAPP");
+
+            options.Resources
                 .Add<CARPResource>("uk-UA")
                 .AddBaseTypes(typeof(AbpValidationResource))
                 .AddVirtualJson("/Localization/CARP");
@@ -64,7 +68,7 @@ public class CARPDomainSharedModule : AbpModule
                 .Get<CmsKitResource>()
                 .AddVirtualJson("/Localization/CMSCARP");
 
-         
+            
             options.DefaultResourceType = typeof(CARPResource);
             options.Languages.Add(new LanguageInfo("uk-UA", "uk-UA", "Український"));
             options.Languages.Add(new LanguageInfo("en", "en", "English"));
