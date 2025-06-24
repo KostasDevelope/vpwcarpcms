@@ -97,4 +97,5 @@ public class CARPDomainSharedModule : AbpModule
     }
 }
 
+
 //Code   https://github.com/abpframework/abp/blob/rel-9.2/docs/en/framework/infrastructure/blob-storing/google.md
